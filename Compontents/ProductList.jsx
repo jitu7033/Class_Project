@@ -1,11 +1,17 @@
+import { useState } from "react";
 
 function ProductList(){
 
-    var productList = [
-        {name : "product1 Name",price: 20.0},
-        {name: "product2 Name",price: 30}
-    ]
+    var [productList,setProductList] = useState([]);
 
+    setTimeout(() =>{
+        setProductList(
+            productList = [
+            {name : "product1 Name",price: 20.0},
+            {name: "product2 Name",price: 30}
+        ]);
+    },5000)
+    
     return (<div>
         <table style={{border:'2px solid green'}}>
             <thead>
