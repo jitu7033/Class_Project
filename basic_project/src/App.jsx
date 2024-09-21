@@ -1,10 +1,14 @@
 
 import './App.css'
 import Header from './Header'
+import ProductList from '../../Compontents/ProductList'
 
 function App() {
- return <>
- <Header title = "this is my tittlt" link = " link1"/>
+ return (
+ <>
+ <header><Header/></header>
+ <main><ProductList/></main>
  </>
+ );
 }
 export default App
