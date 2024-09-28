@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import Header from '../../Compontents/Header.jsx'
+import Header from './Compontents/Header.jsx'
 import './index.css'
 
 

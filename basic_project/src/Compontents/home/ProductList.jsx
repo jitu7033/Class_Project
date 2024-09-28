@@ -1,17 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ProductList(){
+    
+    const [productList,setProductList] = useState([]);
 
-    var [productList,setProductList] = useState([]);
+    // component re-render 
+    useEffect(()=>{
+        console.log("component is re-render ");
+    })
+    
+    // componentn initial render 
+    useEffect(()=>{
+
+    },[])
+
+    // based on do this dependency update 
+    useEffect(()=>{
+        console.log("jitendra ")
+    },[productList])
 
     setTimeout(() =>{
         setProductList(
-            productList = [
+        [
             {name : "product1 Name",price: 20.0},
-            {name: "product2 Name",price: 30}
+            {name: "product2 Name",price: 30},
+            {name: "product3",price : 1001}
         ]);
-    },5000)
-    
+    },1000)
+
     return (<div>
         <table style={{border:'2px solid green'}}>
             <thead>
